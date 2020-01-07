@@ -3,21 +3,52 @@
 
 <div class='form-page'>
    
-        <form  class="main-form">
+        <form  id='save'class="main-form">
            
             <h2 class="form-heading white-text center m-b-20">Save The world </h2>
            
                <br>
                <br>
-                <input id='save'type="submit" value="click to save world"  class="button dark-background white-text m-b-20"> 
+                <input type="submit" value="click to save world"  class="button dark-background white-text m-b-20"> 
         </form>
     
 
        
 </div>  
 
+  <script>
+console.log($('#save'));
+    $('#save').submit(function(e)
+            {   console.log('id clicked');
+                  e.preventDefault();
+                  let data=
+                  {
+                      n:sessionStorage.getItem('val'),
+                      output:sessionStorage.getItem('result'),
+                      name:'anshu'
+                  }
+                  console.log(data);
 
-       
+                  $.ajax(
+                    {
+                        type:'post',
+                        url:'http://35.222.222.87/frontendtask/check/ ',
+                        data:data,
+                        success:function(data)
+                        {
+                            console.log(data);
+                        }
+
+
+            });
+          });
+          
+        
+        </script>
+  </script>
+
+
+
         <script type="text/javascript">
          if (sessionStorage.getItem("counter")) {
           if (sessionStorage.getItem("counter") <= 0) {
@@ -44,35 +75,9 @@
     
         var interval = setInterval(counter, 1000);
         </script>
-        <script >
+      
         
-        $('#save').submit(function(e)
-        {   console.log('id clicked');
-              e.preventDefault();
-              let data=
-              {
-                  n:sessionStorage.getItem('val'),
-                  output:sessionStorage.getItem('result'),
-                  name:'anshu'
-              }
-              console.log(data);
-
-              $.ajax(
-                {
-                    type:'post',
-                    url:'http://35.222.222.87/frontendtask/check/ ',
-                    data:data,
-                    success:function(data)
-                    {
-                        console.log(data);
-                    }
-
-
-        });
-      });
-          
-        
-        </script>
+       
  
 
 
