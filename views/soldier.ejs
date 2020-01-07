@@ -39,9 +39,11 @@ console.log($('#save'));
                             if(data.message=='Correct Answer')
                             {
                               alert('Congratulations you saved the world');
+                              clearInterval(interval);
                             }
                             else{
                               alert('Mission Failed better lucknext time');
+                              clearInterval(interval);
                             }
                            
                         }
