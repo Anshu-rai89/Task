@@ -11,8 +11,7 @@ router.post('/create-session', passport.authenticate(
     {failureRedirect: '/'}),homecontroler.create_session);
 
 
-router.use('/soldier',require('./soldier'));
-router.use('/terrorist',require('./terrorist'));
+
 
 
 
