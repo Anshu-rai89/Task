@@ -1,0 +1,12 @@
+@import "./color.scss";
+@import "./base.scss/base.scss";
+@import "./shared/index.scss";
+@import "./misc.scss";
+
+// fontawesome icons
+@import "./third-party/fa-icons/scss/fontawesome.scss";
+
+// Pages
+@import "./form-page.scss";
+@import './header.scss';
+@import './footer.scss';

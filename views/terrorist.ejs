@@ -1,0 +1,48 @@
+
+<link rel="stylesheet" href="/css/index.css">
+<div class='form-page'>
+  
+        <form action="/crete-session" class="main-form" id='plant-bomb'>
+            <h2 class="form-heading red-text center m-b-20">Plant Bomb</h2>
+            <div class="input-group m-b-20">
+                    <button tabindex="-1">
+                        <i class="fa fa-user"></i>
+                    </button>
+        
+                    <input type="text" name="code" id='number' required placeholder="Enter a no between 0-1000000">
+                </div>
+
+                <input type="submit" value="Plant Bomb"  class="button dark-background white-text m-b-20"> 
+        </form>
+
+        
+</div>
+ 
+
+<script src='/js/soldier.js'> </script>
+<script src='/js/timer.js'> </script>
+ <script type="text/javascript">
+        if (sessionStorage.getItem("counter")) {
+          if (sessionStorage.getItem("counter") <= 0) {
+            var value = 0;
+          } else {
+            var value = sessionStorage.getItem("counter");
+          }
+        } else {var value=-1}
+        document.getElementById('divCounter').innerHTML = value;
+    
+        var counter = function () {
+          if (value <= 0) {
+          
+            clearInterval(interval);
+           
+          } else  {
+            value = parseInt(value) - 1;
+            sessionStorage.setItem("counter", value);
+            $('#terr').css('background-color','red');
+          }
+          document.getElementById('divCounter').innerHTML = value;
+        };
+    
+        var interval = setInterval(counter, 1000);
+        </script>

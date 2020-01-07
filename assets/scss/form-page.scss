@@ -1,0 +1,51 @@
+.form-page{
+    background-image: linear-gradient(to top, #0ff2fe 0%, #2196f3 100%);
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-form{
+    min-width: 250px;
+    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    .input-group {
+        display: flex;
+        padding: 6px 12px;
+        border-radius: 4px;
+        background: #fff;
+    
+        input{
+            border: none;
+            font-size: 14px;
+            width: 200px;
+            margin-right: 5px;
+            background-color: transparent;
+        }
+    
+        button {
+            border: none;
+            background: transparent;
+            cursor: pointer;
+            font-size: 14px;
+            padding: 4px;
+            margin-right: 5px;
+        }
+    }
+    
+}
+
+
+.form-heading{
+    font-weight: 1000;
+    font-size: 32px;
+}

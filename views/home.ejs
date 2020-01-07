@@ -1,0 +1,50 @@
+
+<link rel="stylesheet" href="/css/index.css">
+<div class="form-page">
+       
+    <form action="/create-session" method="POST" class="main-form">
+        <h2 class="form-heading white-text center m-b-20">Sign in</h2>
+        <div class="input-group m-b-20">
+            <button tabindex="-1">
+                <i class="fa fa-user"></i>
+            </button>
+
+            <input type="email" name="email"  required placeholder="Email">
+        </div>
+        <div class="input-group m-b-20">
+            <button tabindex="-1">
+                <i class="fa fa-lock"></i>
+            </button>
+            <input type="password"  name="password"  required placeholder="password">
+        </div>
+        <a href="/user/resetpassword/page" class="link m-b-10 white-text sm-text">Forgot Password?</a>
+        <input type="submit" value="Sign in"  class="button dark-background white-text m-b-20">
+
+        
+    </form>
+</div>    
+
+<script type="text/javascript">
+    if (sessionStorage.getItem("counter")) {
+      if (sessionStorage.getItem("counter") <= 0) {
+        var value = 0;
+      } else {
+        var value = sessionStorage.getItem("counter");
+      }
+    } else value=-1;
+    document.getElementById('divCounter').innerHTML = value;
+
+    var counter = function () {
+      if (value <= 0) {
+        document.getElementById('divCounter').innerHTML+='<h1 style="height:80%%;width:100%;color:white;background-color:red">Game Over</h1>';
+        clearInterval(interval);
+      } else {
+        value = parseInt(value) - 1;
+        sessionStorage.setItem("counter", value);
+        $('#terr').css('background-color','red');
+      }
+      document.getElementById('divCounter').innerHTML = value;
+    };
+
+    var interval = setInterval(counter, 1000);
+    </script>
