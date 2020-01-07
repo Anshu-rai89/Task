@@ -36,7 +36,14 @@ console.log($('#save'));
                         data:data,
                         success:function(data)
                         {
-                            console.log(data);
+                            if(data.message=='Correct Answer')
+                            {
+                              alert('Congratulations you saved the world');
+                            }
+                            else{
+                              alert('Mission Failed better lucknext time');
+                            }
+                           
                         }
 
 
