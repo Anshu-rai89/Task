@@ -35,10 +35,11 @@ console.log($('#save'));
                         url:'http://35.222.222.87/frontendtask/check/ ',
                         data:data,
                         success:function(data)
-                        {
+                        {  console.log(data);
                             if(data.message=='Correct Answer')
                             {
                               alert('Congratulations you saved the world');
+                            
                               clearInterval(interval);
                             }
                             else{
