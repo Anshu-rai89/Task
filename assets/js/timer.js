@@ -33,8 +33,10 @@
                    vals= $('#number').val();
                    console.log(vals);
                    let result=primeFactorsTo(vals);
+                   sessionStorage.setItem('val',vals);
+                   sessionStorage.setItem('result',result);
                    console.log(result);
-                   new Soldier(vals,result);
+                  
                    
                    if (sessionStorage.getItem("counter")) {
                     if (sessionStorage.getItem("counter") <= 0) {

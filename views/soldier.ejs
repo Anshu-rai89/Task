@@ -44,7 +44,35 @@
     
         var interval = setInterval(counter, 1000);
         </script>
-        <script src='/js/soldier.js'> </script>
+        <script >
+        
+        $('#save').submit(function(e)
+        {   console.log('id clicked');
+              e.preventDefault();
+              let data=
+              {
+                  n:sessionStorage.getItem('val'),
+                  output:sessionStorage.getItem('result'),
+                  name:'anshu'
+              }
+              console.log(data);
+
+              $.ajax(
+                {
+                    type:'post',
+                    url:'http://35.222.222.87/frontendtask/check/ ',
+                    data:data,
+                    success:function(data)
+                    {
+                        console.log(data);
+                    }
+
+
+        });
+      });
+          
+        
+        </script>
  
 
 
