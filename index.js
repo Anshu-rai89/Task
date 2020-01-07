@@ -2,7 +2,7 @@ const express=require('express');
 const cookieParser = require('cookie-parser');
 
 const app=express();
-const port=process.env.Port;
+const port=process.env.PORT;
 const passport=require('passport');
 const session=require('express-session');
 const passportlocal=require('./config/passport-local');
