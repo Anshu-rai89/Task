@@ -3,7 +3,7 @@ class Soldier
     constructor(val,result)
     {
         this.val=val;
-        this.result=this.result;
+        this.result=result;
         if(this.result)
         {
            this.ajaxrequest();
@@ -15,7 +15,7 @@ class Soldier
     ajaxrequest()
     {
         $('#save').submit(function(e)
-        {
+        {   console.log('id clicked');
               e.preventDefault();
               let data=
               {

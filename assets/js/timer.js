@@ -33,6 +33,7 @@
                    vals= $('#number').val();
                    console.log(vals);
                    let result=primeFactorsTo(vals);
+                   console.log(result);
                    new Soldier(vals,result);
                    
                    if (sessionStorage.getItem("counter")) {
