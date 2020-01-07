@@ -36,28 +36,4 @@ module.exports.create_session=function(req,res)
 }
 
 
-module.exports.terrorist=async function(req,res)
-{ try{
-    return res.render('terrorist',
-    {
-        title:'terrorist'
-    });
-}catch(err)
-{
-    console.log(err);
-    return;
-}
-}
 
-module.exports.soldier=async function(req,res)
-{ try{ 
-    return res.render('soldier',
-    {
-        title:'soldier'
-    });
-}catch(err)
-{
-    console.log(err);
-    return;
-}
-}
